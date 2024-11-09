@@ -1,0 +1,208 @@
+{% load static %}
+
+    <style>
+        /*:::::Pie de Pagina*/
+.pie-pagina {
+    min-height: 20vh;
+    min-width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 30px 0px;
+}
+
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box {
+    display: grid;
+    justify-items: center;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+
+.pie-pagina .grupo-1 .red-social #facebook {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social #facebook {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 10px;
+    background-color: #fbd400;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social #instagram {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #000000;
+    border-radius: 20%;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social #twitter {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #000000;
+    border-radius: 30%;
+    text-align: center;
+    transition: all 300ms ease;
+}
+
+
+.pie-pagina .grupo-1 .red-social #facebook:hover {
+    background-color: #ffffff;
+    color: #1877F2;
+
+}
+
+
+.pie-pagina .grupo-1 .red-social #instagram:hover {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+    color: white;
+}
+
+
+
+
+.pie-pagina .grupo-1 .red-social #twitter:hover {
+    background: rgb(34, 144, 255);
+
+}
+
+
+
+
+
+.pie-pagina .grupo-2 {
+    background-color: #0b0b0b;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+.box {
+    display: grid;
+    place-items: center;
+}
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+@media screen and (max-width:980px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+   /* Adjust the social media icons alignment */
+   .redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+#Social {
+    margin-left: 10px;
+}
+
+.redes img {
+    margin: 0 5px;
+    /* Adjust spacing */
+}
+    </style>
+<div class="grupo-1">
+    <div class="box">
+        <h2>SOBRE NOSOTROS</h2>
+        <p>Guardianes del Oso Hormiguero es un ejemplo claro de cómo la acción local, combinada 
+            con la educación y la colaboración internacional, puede marcar la diferencia.</p>
+    </div>
+    <div class="box">
+        <h2>SÍGUENOS</h2>
+        <div class="red-social">
+            <a href="https://web.facebook.com" target="_blank">
+                <ion-icon name="logo-facebook" id="facebook"></ion-icon></a>
+            <a href="https://www.instagram.com" target="_blank">
+                <ion-icon name="logo-instagram" id="instagram"></ion-icon></a>
+            <a href="https://twitter.com" target="_blank">
+                <ion-icon name="logo-twitter" id="twitter"></ion-icon></a>
+        </div>
+    </div>
+</div>
+<div class="grupo-2">
+    <div class="copyright">
+        © 2023 Todos los derechos reservados |
+        <a href="">Guardianes del Oso Hormiguero</a>
+    </div>
+    <div class="information">
+        <a href="">Información Compañía</a> |
+        <a href="">Privacidad y Política</a> |
+        <a href="">Términos y condiciones</a>
+    </div>
+</div>

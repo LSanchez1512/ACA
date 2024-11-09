@@ -1,0 +1,875 @@
+{% extends "index.html" %}
+{% block menu %}
+{% include "menu.html" %}
+{%endblock %}
+{% block contenido %}
+{% load static %}
+  <style>
+    /*Cards*/
+.container-card {
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+
+}
+
+.title-cards {
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+    color: #7a7a7a;
+
+}
+
+.card {
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    transition: all 400ms ease-out;
+    cursor: default;
+
+}
+
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3%);
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+}
+
+.card .contenido-card {
+    padding: 15px;
+}
+
+.card .contenido-card h3 {
+    margin-bottom: 15px;
+    text-align: center;
+    color: #7a7a7a;
+}
+
+.card .contenido-card p {
+    line-height: 1.8;
+    color: #6a6a6a;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+
+.card .contenido-card .button2 {
+    display: inline-block;
+    background: #000000;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #ff0000;
+    border-radius: 15px;
+    transition: all 400ms ease;
+    margin-bottom: 5px;
+    margin-left: 100px;
+}
+
+.card .contenido-card .button2:hover {
+    background: #ff000d;
+    color: #fff;
+}
+
+.navbar-toggler-icon {
+    background-color: #202020;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+    filter: hue-rotate(120deg)
+}
+
+#logo {
+    width: 160px;
+    height: 60px;
+    margin-left: -38px;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: -20px;
+
+}
+
+
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #ff0000;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-right: -95px;
+    transition: .5s;
+}
+
+
+.wrapper {
+    width: 350px;
+    height: 505px;
+
+}
+
+
+
+
+
+.grecaptcha-badge {
+    transform: translate(0, 10px);
+
+
+}
+
+@media only screen and (min-width: 280px) and (max-width: 413px) {
+
+
+    #persona {
+        width: 200px;
+        height: 300px;
+        left: 48%;
+        top: 55% !important;
+    }
+
+    #img-graficaS {
+        height: 500px;
+        width: 100%;
+    }
+
+    #img-graficaE {
+        height: 500px;
+        width: 100%;
+    }
+
+    #img-graficaC {
+        height: 500px;
+        width: 100%;
+    }
+
+    #img-graficaD {
+        height: 500px;
+        width: 100%;
+    }
+
+    .grafica {
+        margin-top: 60px;
+        display: grid;
+        place-items: center;
+        min-height: 600px;
+    }
+
+
+
+    .container-card {
+        flex-wrap: wrap;
+    }
+
+    .card .contenido-card .button2 {
+        display: inline-block;
+        background: #000000;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #ffffff;
+        border: 1px solid #ff0000;
+        border-radius: 15px;
+        transition: all 400ms ease;
+        margin-bottom: 5px;
+        margin-left: 117px !important;
+    }
+
+    
+
+
+    .navbar-collapse {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        margin-right: 50px;
+    }
+
+    .card {
+        margin: 15px;
+    }
+
+    #img-grafica {
+        height: 350px;
+        width: 350px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .box {
+        display: grid;
+        place-items: center;
+    }
+
+    .select-menu {
+        margin-right: -178px;
+    }
+
+    #iconoxd {
+        margin-left: -50px;
+
+    }
+
+
+    .select-menu .options {
+
+        width: 300px !important;
+        position: absolute !important;
+        padding: 20px !important;
+        margin-top: 24px !important;
+        border-radius: 8px !important;
+        background: #000000 !important;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 9999;
+        margin-left: -209px !important;
+    }
+
+    #iconoxdMenu {
+        margin-left: -70px;
+    }
+
+
+
+    .navbar-collapse {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        box-sizing: border-box;
+    }
+
+    .contenido {
+        min-height: 150vh;
+        margin-top: 150px;
+
+    }
+
+
+    #logo {
+        width: 120px;
+        height: 50px;
+        margin-left: -80px;
+    }
+
+}
+
+
+@media only screen and (min-width:414px) and (max-width:540px) {
+    #logo {
+        width: 120px;
+        height: 50px;
+        margin-left: -80px;
+    }
+
+
+    .navbar-collapse {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        margin-right: 50px;
+    }
+
+    .navigation a {
+        position: relative;
+        font-size: 1.1em;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        margin-right: -120px;
+
+    }
+
+    .navigation .btnLogin-popup {
+        width: 130px;
+        height: 50px;
+        background: transparent;
+        border: 2px solid #ff0000;
+        outline: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1.1em;
+        color: #fff;
+        font-weight: 500;
+        margin-left: 160px;
+        margin-right: -90px;
+        transition: .5s;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .box {
+        display: grid;
+        place-items: center;
+    }
+
+    .select-menu {
+        margin-right: -178px;
+    }
+
+    #iconoxd {
+        margin-left: -50px;
+
+    }
+
+
+    .select-menu .options {
+
+        width: 300px !important;
+        position: absolute !important;
+        padding: 20px !important;
+        margin-top: 24px !important;
+        border-radius: 8px !important;
+        background: #000000 !important;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 9999;
+        margin-left: -209px !important;
+    }
+
+
+}
+
+
+
+#collapsibleNavbar {
+    margin-left: 20%;
+    /* Ajusta este valor según tus necesidades */
+}
+
+
+/*Fin-Cards*/
+
+@media only screen and (max-width:768px) {
+
+
+  .card .contenido-card .button2 {
+      display: inline-block;
+      background: #000000;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #ffffff;
+      border: 1px solid #ff0000;
+      border-radius: 15px;
+      transition: all 400ms ease;
+      margin-bottom: 5px;
+      margin-left: 176px;
+  }
+
+  .navigation a {
+      position: relative;
+      font-size: 1.5em;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      margin-right: -120px;
+
+  }
+
+
+  .navigation .btnLogin-popup {
+      width: 170px;
+      height: 60px;
+      background: transparent;
+      border: 2px solid #ff0000;
+      outline: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.5em;
+      color: #fff;
+      font-weight: 500;
+      margin-left: 160px;
+      margin-right: -90px;
+      transition: .5s;
+  }
+
+  .column2 {
+      margin-right: 0;
+  }
+
+  #Contactenos {
+      margin-right: 0;
+  }
+
+  .row2 {
+      margin-right: 0;
+  }
+}
+@media only screen and (min-width:541px) and (max-width:635px) {
+  .container-card {
+      flex-wrap: wrap;
+      display: grid;
+      place-items: center;
+  }
+
+  .card {
+      margin: 10px;
+      width: 80%;
+
+  }
+
+
+
+
+
+
+  #logo {
+      width: 120px;
+      height: 50px;
+      margin-left: -80px;
+  }
+
+  .navigation a {
+      position: relative;
+      font-size: 1.1em;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: -20px;
+
+
+  }
+
+  .navigation .btnLogin-popup {
+      width: 130px;
+      height: 45px;
+      background: transparent;
+      border: 2px solid #ff0000;
+      outline: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.1em;
+      color: #fff;
+      font-weight: 500;
+      margin-right: -95px;
+      transition: .5s;
+  }
+
+
+  .wrapper {
+      width: 350px;
+      height: 500px;
+  }
+
+  p {
+      text-align: center;
+  }
+
+  .box {
+      display: grid;
+      place-items: center;
+  }
+
+  .select-menu {
+      margin-left: -60px;
+  }
+
+  #iconoxd {
+      margin-right: -60px;
+  }
+
+
+
+
+}
+
+
+@media only screen and (min-width:636px) and (max-width:905px) {
+  .container-card {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .card {
+      margin: 15px;
+      width: 60%;
+  }
+
+
+
+  #logo {
+      width: 120px;
+      height: 50px;
+      margin-left: -80px;
+  }
+
+  .navigation a {
+      position: relative;
+      font-size: 1.1em;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: -20px;
+
+
+  }
+
+
+  .navigation .btnLogin-popup {
+      width: 130px;
+      height: 45px;
+      background: transparent;
+      border: 2px solid #ff0000;
+      outline: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1.1em;
+      color: #fff;
+      font-weight: 500;
+      margin-right: -95px;
+      transition: .5s;
+  }
+
+  p {
+      text-align: center;
+  }
+
+  .box {
+      display: grid;
+      place-items: center;
+  }
+
+  .select-menu {
+      margin-left: -20px;
+  }
+
+  #iconoxd {
+      margin-right: -60px;
+  }
+
+
+  #navAsistente a {
+      position: relative;
+      font-size: 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      margin-right: -150px;
+      padding: 0 27px;
+
+  }
+
+  #navAsistente a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 3px;
+      background: #ff0000;
+      border-radius: 5px;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .5s;
+  }
+
+  #navAsistente a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+  }
+}
+
+
+@media only screen and (min-width:912px) and (max-width:1024px) {
+  .container-card {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .card {
+      margin: 15px;
+      width: 60%;
+  }
+
+
+  #navAsistente a {
+      position: relative;
+      font-size: 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      margin-right: -120px;
+      padding: 0 30px;
+
+  }
+
+  #persona {
+      width: 203px;
+      height: 312px;
+      left: 48%;
+      top: 78%;
+  }
+}
+
+
+.button2 {
+  font-size: 1rem;
+  padding: 0.8em 2em;
+  background-color: #000;
+  border: 3px solid red;
+  border-radius: 1em;
+  color: #fff;
+  font-weight: bolder;
+  transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
+  box-shadow: -5px 5px 0px 0px rgb(255, 0, 0);
+}
+
+.button2:hover {
+  transform: translate(5px, -5px);
+}
+
+.btn3 {
+  margin-top: auto;
+  /* Empuja el botón hacia la parte inferior del contenedor */
+}
+
+.card2 {
+  width: 17em;
+  height: 22.5em;
+  background: #171717;
+  transition: 1s ease-in-out;
+  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card2 span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1em;
+}
+
+.card2 .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 0.72em;
+  margin: 1em;
+}
+
+.card2 .img {
+  width: 10.8em;
+  height: 10.8em;
+  background: white;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.card2 .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.card2 a {
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+.card2 a:hover {
+  color: red;
+}
+
+.card2 button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+
+  transition: .4s ease-in-out;
+}
+
+.card2 button:hover {
+  background: rgb(0, 0, 0);
+  color: white;
+  cursor: pointer;
+}
+
+.imagenes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Muestra hasta 3 elementos por fila */
+  gap: 20px;
+  /* Espacio entre elementos */
+}
+
+.card2 {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .imagenes {
+      grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+      /* Elementos apilados uno debajo del otro */
+  }
+
+  .card2 .img {
+      width: 10.8em;
+      height: 10.8em;
+      background: white;
+      border-radius: 15px;
+      margin: auto;
+  }
+
+  #navAsistente a {
+      position: relative;
+      font-size: 15px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      margin-right: -110px;
+
+      padding: 0 30px;
+
+  }
+
+  .card2 {
+      width: 100%;
+  }
+
+  #img22 {
+      width: 20.8em !important;
+      height: 10.8em !important;
+      background: rgb(255, 255, 255) !important;
+      border-radius: 15px;
+      margin: auto;
+  }
+}
+
+
+#img22 {
+  width: 10.8em;
+  height: 10.8em;
+  background: white;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Centra horizontalmente las tarjetas */
+  gap: 40px;
+  /* Espacio entre las tarjetas */
+}
+
+#cambiar {
+  color: black;
+}
+
+#cambiar:hover {
+  color: red;
+}
+  
+  </style>
+<div class="title-cards">
+  <h2 id="titulo">Quienes somos</h2>
+</div>
+<div class="container-card">
+
+  <div class="card">
+    <figure>
+      <img src="{% static '../static/img/oso.jpg' %}" alt="" srcset="">
+    </figure>
+    <div class="contenido-card">
+      <h3 id="titulos">Mision y Vision</h3>
+      <p>Nuestra mision consiste en rescatar, recuperar y retornar el Oso Hormiguero a su habitat... </p><br>
+      <a href="/misionVision/"><button class="button2">Ver más</button></a>
+    </div>
+  </div>
+  <div class="card">
+    <figure>
+      <img src="{% static '../static/img/oso2.jpg'%}" alt="">
+    </figure>
+    <div class="contenido-card">
+      <h3 id="titulos">Historia</h3>
+      <p>Hace más de una década, en las profundidades de las selvas de América Central y del Sur, los osos hormigueros, conocidos por su singular apariencia y hábitos alimenticios, estaban en peligro de extinción.</p><br>
+      <a href="/historia/"> <button class="button2">Ver más</button></a>
+    </div>
+  </div>
+  <div class="card">
+    <figure>
+      <img src="{% static '../static/img/oso3.jpg'%}" alt="">
+    </figure>
+    <div class="contenido-card">
+      <h3 id="titulos">Objetivos</h3>
+      <p>Los objetivos de la organización "Guardianes del Oso Hormiguero" están diseñados para abordar de manera integral la conservación de los osos hormigueros y su ecosistema. 
+      </p>
+      <a href="/objetivos/"> <button class="button2">Ver más</button></a>
+    </div>
+  </div>
+</div>
+{% if mensaje2 %}
+<script>
+  Swal.fire({
+    title: 'Guardianes del Oso Hormiguero',
+    text: '{{mensaje2}}',
+    icon: 'info',
+    confirmButtonColor: 'black',
+    confirmButtonText: 'Aceptar'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      location.href = "/"
+    }
+  });
+</script>
+
+
+
+{% endif %}
+{%endblock %}
+{% block piePagina %}
+{% include "piePagina.html" %}
+{%endblock %}

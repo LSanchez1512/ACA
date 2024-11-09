@@ -1,0 +1,80 @@
+{% extends "index.html" %}
+{% block menu %}
+{% include "menu.html" %}
+{%endblock %}
+{% block contenido %}
+<style>
+    .ini {
+        color: #000;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #514b4b;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .historia {
+        margin-top: 30px;
+    }
+
+    .historia h2 {
+        font-size: 24px;
+    }
+
+    .historia p {
+        font-size: 16px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="ini">
+        <h1 id="titulo">Guardianes del Oso Hormiguero</h1>
+        <p style="color: black">En busca de la recuperacion del Vermilingua</p>
+    </div>
+
+    <div class="container">
+        
+        <div class="historia">
+            <h2 style="text-align: center; color: white;" >Historia</h2>
+            <p style="color: white;">La Fundación Guardianes del Oso Hormiguero se fundó en 2005 en el norte de Colombia, una de las zonas con mayor población de oso hormiguero
+                 en América Latina. Su misión principal es la conservación de esta especie, que está en peligro debido a la destrucción de su hábitat, la caza 
+                 furtiva, y el tráfico ilegal de fauna. </p>
+            <p style="color: white;">El Oso Hormiguero (Myrmecophaga tridactyla) es un mamífero que se encuentra principalmente en América Central y del Sur. Su dieta se compone 
+                casi exclusivamente de hormigas y termitas, y su particular forma de vida, con una lengua extremadamente larga, lo hace uno de los animales más singulares del 
+                continente. Sin embargo, su naturaleza solitaria y sus hábitos nocturnos, sumados a la constante presión de la actividad humana, han puesto a esta especie al borde
+                 de la extinción en varias regiones
+                </p>
+        </div>
+
+        <div class="historia">
+            <h2 style="text-align: center; color: white;">Origenes</h2>
+            <p style="color: white;">La fundación fue creada por un grupo de biólogos, veterinarios y ecologistas que se dieron cuenta de la urgencia de actuar para evitar la 
+                desaparición de este icónico animal. Al principio, la organización comenzó con un pequeño grupo de voluntarios que rescataron a un oso hormiguero huérfano de la 
+                caza furtiva. Este oso, llamado "Tito", se convirtió en el primer embajador de la causa, y su historia de rehabilitación y recuperación dio visibilidad a la fundación.
+            </p>
+            <p style="color: white;">Desde sus primeros días, la Fundación Guardianes del Oso Hormiguero ha trabajado de cerca con comunidades locales, educando sobre la importancia de proteger al 
+                oso hormiguero y ofreciendo alternativas para reducir los conflictos entre los humanos y los animales. A través de talleres, charlas y programas educativos, la 
+                fundación ha logrado ganar apoyo local y ha trabajado para cambiar la percepción de que estos animales son una amenaza para las actividades humanas.
+            </p>
+        </div>
+
+    </div>
+{%endblock %}
+{% block piePagina %}
+{% include "piePagina.html" %}
+{%endblock %}

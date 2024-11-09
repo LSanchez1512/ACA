@@ -1,0 +1,71 @@
+{% extends "index.html" %}
+{% block menu %}
+{% include "menu.html" %}
+{%endblock %}
+{% block contenido %}
+<style>
+    .ini {
+        color: #000;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #514b4b;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    .mission-vision {
+        margin-top: 30px;
+    }
+
+    .mission-vision h2 {
+        font-size: 24px;
+    }
+
+    .mission-vision p {
+        font-size: 16px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="ini">
+        <h1 id="titulo">Guardianes del Oso Hormiguero</h1>
+        <p style="color: black">En busca de la recuperacion del Vermilingua</p>
+    </div>
+
+    <div class="container">
+        
+        <div class="mission-vision">
+            <h2 style="text-align: center; color: white;" >Misión</h2>
+            <p style="color: white;">Nuestra misión  es proteger y conservar el oso hormiguero y su hábitat natural, promoviendo la educación ambiental,
+                 la restauración ecológica y el trabajo colaborativo con comunidades locales, autoridades y organizaciones internacionales. A través de 
+                 un enfoque integral y sostenible, buscamos garantizar la supervivencia de esta especie en peligro de extinción, contribuyendo al equilibrio 
+                 de los ecosistemas tropicales y al bienestar de las generaciones futuras. </p>
+        </div>
+
+        <div class="mission-vision">
+            <h2 style="text-align: center; color: white;">Visión</h2>
+            <p style="color: white;">Nuestra visión es ser una organización líder en la conservación del oso hormiguero y la protección de los ecosistemas 
+                tropicales, reconocida por su impacto positivo en la preservación de la biodiversidad, la promoción de un desarrollo sostenible y la creación 
+                de un modelo replicable de conservación en armonía con las comunidades locales.</p>
+        </div>
+
+    </div>
+{%endblock %}
+{% block piePagina %}
+{% include "piePagina.html" %}
+{%endblock %}
